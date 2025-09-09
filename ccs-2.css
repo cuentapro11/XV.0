@@ -16,9 +16,9 @@
     --shadow-gold: 0 4px 20px hsl(42 85% 55% / 0.25);
     /* Nuevo tono para laterales tipo papel (blanco piedra) */
     --paper-side: 0 0% 97%;
-    /* Rosados para fondos alternados */
-    --pink-light: 340 85% 96%;
-    --pink-dark: 340 45% 90%;
+    /* Rosados para fondos alternados (más oscuros) */
+    --pink-light: 340 80% 90%;
+    --pink-dark: 340 50% 82%;
 }
 
 /* Contenedor centrado tipo tarjeta */
