@@ -575,7 +575,7 @@ body {
 /* Countdown */
 .countdown-section {
     text-align: center;
-    background-color: #ffffff;
+    background-color: transparent;
     border: 1px solid hsl(var(--gold) / 0.25);
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.06);
@@ -1184,4 +1184,11 @@ body {
 
 /* Desktop-specific: (parallax por capa, ya no usamos background-attachment) */
 
-/* Fondos rosados alternados por sección: removido para mantener fondo uniforme */
+/* Fondos rosados alternados por sección */
+.page-shell .content .site-container > section:nth-of-type(odd) {
+    background-color: hsl(var(--pink-light));
+}
+
+.page-shell .content .site-container > section:nth-of-type(even) {
+    background-color: hsl(var(--pink-dark));
+}
