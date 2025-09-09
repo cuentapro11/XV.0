@@ -36,8 +36,8 @@
 .page-shell {
     max-width: 1100px;
     margin: 0 auto;
-    background: linear-gradient(to bottom, hsl(var(--pink-light)), hsl(var(--pink-dark)));
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+    background: transparent;
+    box-shadow: none;
 }
 
 /* Animaciones de iconos modernos */
@@ -163,6 +163,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    background-color: hsl(var(--pink-sides));
 }
 
 body {
@@ -1044,8 +1048,8 @@ body {
     }
     /* En móvil, eliminar laterales y usar fondo uniforme */
     body { 
-        /* Mantener solo el degradado vertical en móvil */
-        background: linear-gradient(to bottom, hsl(var(--pink-light)), hsl(var(--pink-dark))); 
+        /* Mantener un único color en laterales también en móvil */
+        background-color: hsl(var(--pink-sides));
     }
     /* El contenedor ocupa el 100% en móvil, sin borde/sombra */
     .site-container { padding: 0; max-width: none; width: 100%; }
