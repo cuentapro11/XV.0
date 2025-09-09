@@ -970,6 +970,7 @@ body {
 /* Footer como sección final */
 .footer-section {
     padding: 4rem 1rem;
+    background-color: #FFF2F3 !important;
 }
 .footer {
     display: none;
