@@ -972,6 +972,9 @@ body {
     padding: 4rem 1rem;
     background-color: #FFF2F3 !important;
 }
+.footer-section .footer-content {
+    text-align: center;
+}
 .footer {
     display: none;
 }
