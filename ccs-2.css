@@ -1192,3 +1192,16 @@ body {
 .page-shell .content .site-container > section:nth-of-type(even) {
     background-color: hsl(var(--pink-dark));
 }
+
+/* Asignación explícita por secciones para asegurar alternancia visible */
+.countdown-section,
+.party-section,
+.rsvp-section {
+    background-color: #FFF2F3 !important; /* rosado muy claro */
+}
+
+.events-section,
+.gallery-section,
+.gifts-section {
+    background-color: #FDE2E1 !important; /* rosado pastel suave */
+}
