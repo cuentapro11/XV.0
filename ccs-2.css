@@ -968,8 +968,8 @@ body {
 
 /* Footer */
 .footer {
-    background-color: transparent;
-    color: white;
+    background-color: #FFF2F3;
+    color: hsl(var(--brown));
     padding: 2rem 1rem;
     text-align: center;
 }
