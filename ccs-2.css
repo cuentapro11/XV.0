@@ -1195,13 +1195,13 @@ body {
 
 /* Asignación explícita por secciones para asegurar alternancia visible */
 .countdown-section,
-.party-section,
-.rsvp-section {
+.gallery-section,
+.gifts-section {
     background-color: #FFF2F3 !important; /* rosado muy claro */
 }
 
 .events-section,
-.gallery-section,
-.gifts-section {
+.party-section,
+.rsvp-section {
     background-color: #FDE2E1 !important; /* rosado pastel suave */
 }
