@@ -967,11 +967,12 @@ body {
 }
 
 /* Footer */
+/* Footer como sección final */
+.footer-section {
+    padding: 4rem 1rem;
+}
 .footer {
-    background-color: #FFF2F3;
-    color: hsl(var(--brown));
-    padding: 2rem 1rem;
-    text-align: center;
+    display: none;
 }
 
 .footer-content h3 {
@@ -1204,4 +1205,9 @@ body {
 .party-section,
 .rsvp-section {
     background-color: #FDE2E1 !important; /* rosado pastel suave */
+}
+
+/* Asegurar secuencia: footer como siguiente sección clara */
+.footer-section {
+    background-color: #FFF2F3 !important;
 }
