@@ -982,6 +982,71 @@ p, span, a, li, label, small, strong, em,
 div, button, input, textarea {
     color: #000 !important;
 }
+
+/* Theming de botones e iconos por sección */
+/* Secciones claras (#FFF2F3) -> botones e iconos #FDE2E1 */
+.countdown-section .btn-wedding,
+.gallery-section .btn-wedding,
+.gifts-section .btn-wedding,
+.footer-section .btn-wedding {
+    background: #FDE2E1 !important;
+    border: 1px solid #FDE2E1 !important;
+    color: #000 !important;
+}
+
+.countdown-section .event-icon,
+.countdown-section .camera-icon,
+.countdown-section .gift-icon,
+.countdown-section .party-icon,
+.countdown-section .whatsapp-icon,
+.gallery-section .event-icon,
+.gallery-section .camera-icon,
+.gallery-section .gift-icon,
+.gallery-section .party-icon,
+.gallery-section .whatsapp-icon,
+.gifts-section .event-icon,
+.gifts-section .camera-icon,
+.gifts-section .gift-icon,
+.gifts-section .party-icon,
+.gifts-section .whatsapp-icon,
+.footer-section .event-icon,
+.footer-section .camera-icon,
+.footer-section .gift-icon,
+.footer-section .party-icon,
+.footer-section .whatsapp-icon {
+    background-color: #FDE2E1 !important;
+    border-color: #FDE2E1 !important;
+    color: #000 !important;
+}
+
+/* Secciones pastel (#FDE2E1) -> botones e iconos #FFF2F3 */
+.events-section .btn-wedding,
+.party-section .btn-wedding,
+.rsvp-section .btn-wedding {
+    background: #FFF2F3 !important;
+    border: 1px solid #FFF2F3 !important;
+    color: #000 !important;
+}
+
+.events-section .event-icon,
+.events-section .camera-icon,
+.events-section .gift-icon,
+.events-section .party-icon,
+.events-section .whatsapp-icon,
+.party-section .event-icon,
+.party-section .camera-icon,
+.party-section .gift-icon,
+.party-section .party-icon,
+.party-section .whatsapp-icon,
+.rsvp-section .event-icon,
+.rsvp-section .camera-icon,
+.rsvp-section .gift-icon,
+.rsvp-section .party-icon,
+.rsvp-section .whatsapp-icon {
+    background-color: #FFF2F3 !important;
+    border-color: #FFF2F3 !important;
+    color: #000 !important;
+}
 .footer {
     display: none;
 }
