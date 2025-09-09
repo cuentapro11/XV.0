@@ -988,10 +988,16 @@ div, button, input, textarea {
 .countdown-section .btn-wedding,
 .gallery-section .btn-wedding,
 .gifts-section .btn-wedding,
-.footer-section .btn-wedding {
+.footer-section .btn-wedding,
+/* incluir botones de carrusel en secciones claras */
+.gallery-section .carousel-btn {
     background: #FDE2E1 !important;
     border: 1px solid #FDE2E1 !important;
     color: #000 !important;
+}
+
+.gallery-section .carousel-btn:hover { 
+    background: #FDE2E1 !important; 
 }
 
 .countdown-section .event-icon,
@@ -1022,10 +1028,20 @@ div, button, input, textarea {
 /* Secciones pastel (#FDE2E1) -> botones e iconos #FFF2F3 */
 .events-section .btn-wedding,
 .party-section .btn-wedding,
-.rsvp-section .btn-wedding {
+.rsvp-section .btn-wedding,
+/* por consistencia si hubiese botones genéricos */
+.events-section .carousel-btn,
+.party-section .carousel-btn,
+.rsvp-section .carousel-btn {
     background: #FFF2F3 !important;
     border: 1px solid #FFF2F3 !important;
     color: #000 !important;
+}
+
+.events-section .carousel-btn:hover,
+.party-section .carousel-btn:hover,
+.rsvp-section .carousel-btn:hover { 
+    background: #FFF2F3 !important; 
 }
 
 .events-section .event-icon,
