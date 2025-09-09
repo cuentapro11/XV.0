@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeCarousel();
     initializeModal();
     initializeParallax();
+    applySectionTheming();
 });
 
 // Modal de bienvenida
@@ -306,4 +307,24 @@ function showToast(title, message) {
     setTimeout(() => {
         toast.classList.remove('show');
     }, 4000);
+}
+
+// Aplicar colores a iconos (lord-icon) según la sección
+function applySectionTheming() {
+    const lightSections = document.querySelectorAll('.countdown-section, .gallery-section, .gifts-section, .footer-section');
+    const pastelSections = document.querySelectorAll('.events-section, .party-section, .rsvp-section');
+
+    lightSections.forEach(section => {
+        const lordIcons = section.querySelectorAll('lord-icon');
+        lordIcons.forEach(icon => {
+            icon.setAttribute('colors', 'primary:#FDE2E1,secondary:#FDE2E1');
+        });
+    });
+
+    pastelSections.forEach(section => {
+        const lordIcons = section.querySelectorAll('lord-icon');
+        lordIcons.forEach(icon => {
+            icon.setAttribute('colors', 'primary:#FFF2F3,secondary:#FFF2F3');
+        });
+    });
 }
