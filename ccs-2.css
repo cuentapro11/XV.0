@@ -36,7 +36,7 @@
 .page-shell {
     max-width: 1100px;
     margin: 0 auto;
-    background: #ffffff;
+    background: transparent;
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
@@ -562,7 +562,7 @@ body {
     z-index: 1;
     /* Ya no empuja 100vh completos porque la portada es 60vh */
     margin-top: 0;
-    background: hsl(var(--cream));
+    background: transparent;
 }
 
 /* Sections */
@@ -577,7 +577,7 @@ body {
 
 .gallery-section,
 .gifts-section {
-    background-color: hsl(var(--warm-white));
+    background-color: transparent;
 }
 
 /* Countdown */
@@ -976,7 +976,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: hsl(var(--brown));
+    background-color: transparent;
     color: white;
     padding: 2rem 1rem;
     text-align: center;
@@ -1192,11 +1192,4 @@ body {
 
 /* Desktop-specific: (parallax por capa, ya no usamos background-attachment) */
 
-/* Fondos rosados alternados por sección */
-.page-shell .content .site-container > section:nth-of-type(odd) {
-    background-color: hsl(var(--pink-light));
-}
-
-.page-shell .content .site-container > section:nth-of-type(even) {
-    background-color: hsl(var(--pink-dark));
-}
+/* Fondos rosados alternados por sección: removido para mantener fondo uniforme */
