@@ -1022,7 +1022,6 @@ div, button, input, textarea {
 .footer-section .whatsapp-icon {
     background-color: #FDE2E1 !important;
     border-color: #FDE2E1 !important;
-    color: #000 !important;
 }
 
 /* Secciones pastel (#FDE2E1) -> botones e iconos #FFF2F3 */
@@ -1061,7 +1060,6 @@ div, button, input, textarea {
 .rsvp-section .whatsapp-icon {
     background-color: #FFF2F3 !important;
     border-color: #FFF2F3 !important;
-    color: #000 !important;
 }
 .footer {
     display: none;
