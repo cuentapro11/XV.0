@@ -16,6 +16,9 @@
     --shadow-gold: 0 4px 20px hsl(42 85% 55% / 0.25);
     /* Nuevo tono para laterales tipo papel (blanco piedra) */
     --paper-side: 0 0% 97%;
+    /* Rosados para fondos alternados */
+    --pink-light: 340 85% 96%;
+    --pink-dark: 340 45% 90%;
 }
 
 /* Contenedor centrado tipo tarjeta */
@@ -1173,3 +1176,12 @@ body {
 }
 
 /* Desktop-specific: (parallax por capa, ya no usamos background-attachment) */
+
+/* Fondos rosados alternados por sección */
+.page-shell .content .site-container > section:nth-of-type(odd) {
+    background-color: hsl(var(--pink-light));
+}
+
+.page-shell .content .site-container > section:nth-of-type(even) {
+    background-color: hsl(var(--pink-dark));
+}
