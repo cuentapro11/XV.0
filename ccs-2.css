@@ -975,6 +975,13 @@ body {
 .footer-section .footer-content {
     text-align: center;
 }
+/* Override global de color de texto a negro */
+body,
+h1, h2, h3, h4, h5, h6,
+p, span, a, li, label, small, strong, em,
+div, button, input, textarea {
+    color: #000 !important;
+}
 .footer {
     display: none;
 }
