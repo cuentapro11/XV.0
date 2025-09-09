@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeCarousel();
     initializeModal();
     initializeParallax();
-    applySectionTheming();
+    // applySectionTheming(); // Desactivado para respetar colores específicos por icono
 });
 
 // Modal de bienvenida

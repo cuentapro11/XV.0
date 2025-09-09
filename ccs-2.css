@@ -670,6 +670,13 @@ body {
 	animation: tieFloat 3s ease-in-out infinite;
 }
 
+/* Colorear ícono de dress code a #FDE2E1 */
+.party-icon .tie-icon svg *,
+.party-icon .tie-icon svg {
+	fill: #FDE2E1 !important;
+	stroke: #FDE2E1 !important;
+}
+
 @keyframes tieFloat {
 	0% { transform: translateY(0) rotate(0deg); }
 	50% { transform: translateY(-4px) rotate(1deg); }
@@ -1066,10 +1073,7 @@ div, button, input, textarea {
 .event-icon, .party-icon, .gift-icon, .whatsapp-icon, .camera-icon, .modal-icon {
     color: #000 !important;
 }
-.event-icon svg, .party-icon svg, .gift-icon svg, .whatsapp-icon svg, .camera-icon svg, .modal-icon svg {
-    fill: #000 !important;
-    stroke: #000 !important;
-}
+/* No forzar negro en SVG para permitir colores por icono */
 .footer {
     display: none;
 }
