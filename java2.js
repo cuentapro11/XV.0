@@ -317,14 +317,14 @@ function applySectionTheming() {
     lightSections.forEach(section => {
         const lordIcons = section.querySelectorAll('lord-icon');
         lordIcons.forEach(icon => {
-            icon.setAttribute('colors', 'primary:#e8b730,secondary:#e8b730');
+            icon.setAttribute('colors', 'primary:#000000,secondary:#000000');
         });
     });
 
     pastelSections.forEach(section => {
         const lordIcons = section.querySelectorAll('lord-icon');
         lordIcons.forEach(icon => {
-            icon.setAttribute('colors', 'primary:#e8b730,secondary:#e8b730');
+            icon.setAttribute('colors', 'primary:#000000,secondary:#000000');
         });
     });
 }

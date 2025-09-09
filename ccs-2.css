@@ -1061,6 +1061,15 @@ div, button, input, textarea {
     background-color: #FFF2F3 !important;
     border-color: #FFF2F3 !important;
 }
+
+/* Forzar color negro en iconografía SVG e icon containers */
+.event-icon, .party-icon, .gift-icon, .whatsapp-icon, .camera-icon, .modal-icon {
+    color: #000 !important;
+}
+.event-icon svg, .party-icon svg, .gift-icon svg, .whatsapp-icon svg, .camera-icon svg, .modal-icon svg {
+    fill: #000 !important;
+    stroke: #000 !important;
+}
 .footer {
     display: none;
 }
