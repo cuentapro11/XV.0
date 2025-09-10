@@ -1199,6 +1199,7 @@ button,
     box-shadow: none !important;
     filter: none !important;
     padding: 0 !important;
+    border-radius: 0 !important;
 }
 
 /* Estados: asegurar sin borde ni sombra en hover/focus/active */
