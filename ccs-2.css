@@ -1163,6 +1163,20 @@ div, button, input, textarea {
     max-width: 300px;
 }
 
+/* Final overrides: eliminar completamente anillos/bordes dorados de todos los iconos */
+.event-icon,
+.camera-icon,
+.gift-icon,
+.whatsapp-icon {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    filter: none !important;
+    animation: none !important;
+}
+
 .toast.show {
     opacity: 1;
     transform: translateX(0);
