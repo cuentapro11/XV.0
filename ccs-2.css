@@ -320,13 +320,11 @@ body {
 }
 
 /* Botones del modal: colores solicitados */
-.modal-buttons #enterWithMusic.btn-wedding {
-    background: #FFF2F3 !important;
-    border: 1px solid #FFF2F3 !important;
-    color: #899899 !important;
-}
+.modal-buttons #enterWithMusic.btn-wedding,
 .modal-buttons #enterWithoutMusic.btn-wedding {
+    background-image: none !important;
     background: #FFF2F3 !important;
+    background-color: #FFF2F3 !important;
     border: 1px solid #FFF2F3 !important;
     color: #899899 !important;
 }
