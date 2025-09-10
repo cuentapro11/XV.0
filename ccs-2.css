@@ -670,12 +670,7 @@ body {
 	animation: tieFloat 3s ease-in-out infinite;
 }
 
-/* Colorear ícono de dress code a #FDE2E1 */
-.party-icon .tie-icon svg *,
-.party-icon .tie-icon svg {
-	fill: #FDE2E1 !important;
-	stroke: #FDE2E1 !important;
-}
+/* Revertir color especial de corbata (usa estilos originales) */
 
 @keyframes tieFloat {
 	0% { transform: translateY(0) rotate(0deg); }
@@ -700,16 +695,17 @@ body {
     width: 5rem;
     height: 5rem;
     margin: 0 auto 1.5rem;
-    padding: 0;
-    border-radius: 0;
-    background: transparent;
-    border: none;
-    box-shadow: none;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: hsl(var(--gold) / 0.1);
+    border: 2px solid hsl(var(--gold));
+    box-shadow: var(--shadow-elegant);
     display: flex;
     align-items: center;
     justify-content: center;
-    filter: none;
-    animation: none;
+    color: hsl(var(--gold));
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+    animation: gentle-pulse 2s ease-in-out infinite;
 }
 
 .celebration-icon {
@@ -783,19 +779,20 @@ body {
 }
 
 .camera-icon {
-    width: auto;
-    height: auto;
+    width: 4rem;
+    height: 4rem;
     margin: 0 auto 3rem;
-    padding: 0;
-    border-radius: 0;
-    background: transparent;
-    border: none;
-    box-shadow: none;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: hsl(var(--gold) / 0.1);
+    border: 2px solid hsl(var(--gold));
+    box-shadow: var(--shadow-elegant);
     display: flex;
     align-items: center;
     justify-content: center;
-    filter: none;
-    animation: none;
+    color: hsl(var(--gold));
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+    animation: gentle-bounce 2s ease-in-out infinite;
 }
 
 /* Carrusel */
@@ -897,19 +894,20 @@ body {
 }
 
 .party-icon {
-    width: auto;
-    height: auto;
+    width: 6rem;
+    height: 6rem;
     margin: 0 auto 1.5rem;
-    padding: 0;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
+    padding: 0.75rem;
+    border-radius: 50%;
+    background-color: hsl(var(--gold) / 0.1);
+    box-shadow: var(--shadow-elegant);
     display: flex;
     align-items: center;
     justify-content: center;
-    filter: none;
-    animation: none;
-    overflow: visible;
+    color: hsl(var(--gold));
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+    animation: gentle-pulse 2s ease-in-out infinite;
+    overflow: hidden;
 }
 
 .party-icon .tie-icon,
@@ -942,19 +940,20 @@ body {
 
 .gift-icon,
 .whatsapp-icon {
-    width: auto;
-    height: auto;
+    width: 5rem;
+    height: 5rem;
     margin: 0 auto 2rem;
-    padding: 0;
-    border-radius: 0;
-    background: transparent;
-    border: none;
-    box-shadow: none;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: hsl(var(--gold) / 0.1);
+    border: 2px solid hsl(var(--gold));
+    box-shadow: var(--shadow-elegant);
     display: flex;
     align-items: center;
     justify-content: center;
-    filter: none;
-    animation: none;
+    color: hsl(var(--gold));
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+    animation: gentle-bounce 2s ease-in-out infinite;
 }
 
 .whatsapp-icon {
