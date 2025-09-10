@@ -1088,6 +1088,24 @@ div, button, input, textarea {
     color: #899899 !important;
 }
 
+/* Remover bordes/círculos dorados de TODOS los íconos y del contador */
+.event-icon,
+.camera-icon,
+.gift-icon,
+.whatsapp-icon {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    filter: none !important;
+    animation: none !important;
+}
+
+.countdown-section {
+    border: none !important;
+}
+
 .events-section .event-icon,
 .events-section .camera-icon,
 .events-section .gift-icon,
