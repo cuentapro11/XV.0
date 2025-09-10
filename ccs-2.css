@@ -1066,7 +1066,7 @@ div, button, input, textarea {
 
 /* Forzar color negro en iconografía SVG e icon containers */
 .event-icon, .party-icon, .gift-icon, .whatsapp-icon, .camera-icon, .modal-icon {
-    color: #000 !important;
+    color: #899899 !important;
 }
 /* No forzar negro en SVG para permitir colores por icono */
 .footer {
