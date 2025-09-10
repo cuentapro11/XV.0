@@ -1188,6 +1188,19 @@ button,
     outline: none !important;
 }
 
+/* Quitar fondo/borde directamente al elemento lord-icon dentro de los contenedores */
+.event-icon lord-icon,
+.camera-icon lord-icon,
+.gift-icon lord-icon,
+.whatsapp-icon lord-icon,
+.party-icon lord-icon {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    padding: 0 !important;
+}
+
 /* Estados: asegurar sin borde ni sombra en hover/focus/active */
 .btn-wedding:hover,
 .btn-wedding:focus,
