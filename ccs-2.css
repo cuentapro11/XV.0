@@ -925,6 +925,17 @@ body {
     overflow: hidden !important;
 }
 
+/* Remover borde/círculo dorado SOLO en Música, Dress Code y Detalles */
+.party-section .party-card .party-icon {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    filter: none !important;
+    animation: none !important;
+}
+
 .party-icon .tie-icon,
 .party-icon lord-icon,
 .party-icon svg {
