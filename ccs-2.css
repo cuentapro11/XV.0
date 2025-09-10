@@ -1186,6 +1186,27 @@ button,
     outline: none !important;
 }
 
+/* Estados: asegurar sin borde ni sombra en hover/focus/active */
+.btn-wedding:hover,
+.btn-wedding:focus,
+.btn-wedding:active,
+.carousel-btn:hover,
+.carousel-btn:focus,
+.carousel-btn:active {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background-image: none !important;
+}
+
+/* Evitar bordes por apariencia nativa */
+.btn-wedding,
+.carousel-btn,
+button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
 .toast.show {
     opacity: 1;
     transform: translateX(0);
