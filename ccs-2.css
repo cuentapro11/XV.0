@@ -1177,6 +1177,15 @@ div, button, input, textarea {
     animation: none !important;
 }
 
+/* Final override: quitar bordes y sombras de TODOS los botones */
+button,
+.btn-wedding,
+.carousel-btn {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
 .toast.show {
     opacity: 1;
     transform: translateX(0);
