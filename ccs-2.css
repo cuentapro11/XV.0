@@ -1197,6 +1197,14 @@ div, button, input, textarea {
     }
 }
 
+/* Texto de todos los botones en blanco */
+button,
+.btn-wedding,
+button.btn-wedding,
+.carousel-btn {
+    color: #ffffff !important;
+}
+
 @media (max-width: 480px) {
     .names {
         font-size: 2.5rem;
