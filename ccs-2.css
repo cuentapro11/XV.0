@@ -1202,6 +1202,19 @@ button,
     border-radius: 0 !important;
 }
 
+/* Apagar cualquier marco para íconos específicos en sus secciones */
+.events-section .event-icon,
+.gallery-section .camera-icon,
+.gifts-section .gift-icon,
+.rsvp-section .whatsapp-icon {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    filter: none !important;
+}
+
 /* Estados: asegurar sin borde ni sombra en hover/focus/active */
 .btn-wedding:hover,
 .btn-wedding:focus,
