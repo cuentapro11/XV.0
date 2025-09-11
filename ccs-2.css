@@ -54,20 +54,12 @@
 }
 
 .animated-celebration {
-    transition: transform 0.3s ease;
-}
-
-.animated-celebration:hover {
-    transform: scale(1.1);
+    animation: gentle-pulse 2s ease-in-out infinite;
 }
 
 .animated-camera {
-    transition: transform 0.3s ease;
+    animation: gentle-bounce 2s ease-in-out infinite;
     cursor: pointer;
-}
-
-.animated-camera:hover {
-    transform: scale(1.1);
 }
 
 .animated-camera:active .flash-effect {
@@ -81,35 +73,19 @@
 }
 
 .animated-music {
-    transition: transform 0.3s ease;
-}
-
-.animated-music:hover {
-    transform: scale(1.1) rotate(5deg);
+    animation: gentle-pulse 2s ease-in-out infinite;
 }
 
 .animated-dresscode {
-    transition: transform 0.3s ease;
-}
-
-.animated-dresscode:hover {
-    transform: scale(1.1);
+    animation: gentle-pulse 2s ease-in-out infinite;
 }
 
 .animated-clipboard {
-    transition: transform 0.3s ease;
-}
-
-.animated-clipboard:hover {
-    transform: scale(1.1);
+    animation: gentle-pulse 2s ease-in-out infinite;
 }
 
 .animated-gift {
-    transition: transform 0.3s ease;
-}
-
-.animated-gift:hover {
-    transform: scale(1.1);
+    animation: gentle-bounce 2s ease-in-out infinite;
 }
 
 .animated-gift:hover .gift-lid {
@@ -123,19 +99,11 @@
 }
 
 .animated-whatsapp {
-    transition: transform 0.3s ease;
-}
-
-.animated-whatsapp:hover {
-    transform: scale(1.1);
+    animation: gentle-pulse 2s ease-in-out infinite;
 }
 
 .animated-volume {
-    transition: transform 0.3s ease;
-}
-
-.animated-volume:hover {
-    transform: scale(1.1);
+    animation: gentle-pulse 2s ease-in-out infinite;
 }
 
 /* Efectos globales para iconos */
