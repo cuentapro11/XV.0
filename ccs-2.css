@@ -261,7 +261,7 @@ body {
     content: "";
     position: absolute;
     inset: -40vh -10vw -40vh -10vw;
-    background-image: url('https://i.ibb.co/LzVyZW3t/ac7b928777c3c889825a9d434096caed.jpg');
+    background-image: url('https://i.ibb.co/5W8Zjdk9/09e63d1c599174e6560fae197a8f996a.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.55;
@@ -683,6 +683,13 @@ body {
 	width: 110px;
 	height: 110px;
 	animation: tieFloat 3s ease-in-out infinite;
+}
+
+/* Color de la corbata en Dress Code */
+.party-icon .tie-icon svg *,
+.party-icon .tie-icon svg {
+	fill: #FDE2E1 !important;
+	stroke: #FDE2E1 !important;
 }
 
 /* Revertir color especial de corbata (usa estilos originales) */
