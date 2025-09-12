@@ -1211,28 +1211,7 @@ button {
     appearance: none;
 }
 
-/* Bordes solo para botones: Sugerir canción, Ver más y Más info */
-button.btn-wedding[onclick="suggestMusic()"],
-button.btn-wedding[onclick="showDressCode()"],
-button.btn-wedding[onclick="showTips()"],
-button.btn-wedding[onclick="showGifts()"] {
-    border: 1px solid hsl(var(--gold)) !important;
-}
-
-button.btn-wedding[onclick="suggestMusic()"]:hover,
-button.btn-wedding[onclick="showDressCode()"]:hover,
-button.btn-wedding[onclick="showTips()"]:hover,
-button.btn-wedding[onclick="showGifts()"]:hover,
-button.btn-wedding[onclick="suggestMusic()"]:focus,
-button.btn-wedding[onclick="showDressCode()"]:focus,
-button.btn-wedding[onclick="showTips()"]:focus,
-button.btn-wedding[onclick="showGifts()"]:focus,
-button.btn-wedding[onclick="suggestMusic()"]:active,
-button.btn-wedding[onclick="showDressCode()"]:active,
-button.btn-wedding[onclick="showTips()"]:active,
-button.btn-wedding[onclick="showGifts()"]:active {
-    border: 1px solid hsl(var(--gold)) !important;
-}
+/* (removido) */
 
 .toast.show {
     opacity: 1;
