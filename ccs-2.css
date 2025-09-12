@@ -16,6 +16,11 @@
     --shadow-gold: 0 4px 20px hsl(42 85% 55% / 0.25);
     /* Nuevo tono para laterales tipo papel (blanco piedra) */
     --paper-side: 0 0% 97%;
+    /* Paleta rosada solicitada */
+    /* #FFF2F3 (superior), #DFB6B4 (laterales), #FDE2E1 (inferior) */
+    --pink-light: 355 100% 97%; /* #FFF2F3 */
+    --pink-dark: 2 87% 94%;     /* #FDE2E1 */
+    --pink-sides: 3 40% 79%;    /* #DFB6B4 */
 }
 
 /* Contenedor centrado tipo tarjeta */
@@ -31,8 +36,8 @@
 .page-shell {
     max-width: 1100px;
     margin: 0 auto;
-    background: #ffffff;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+    background: transparent;
+    box-shadow: none;
 }
 
 /* Animaciones de iconos modernos */
@@ -49,20 +54,12 @@
 }
 
 .animated-celebration {
-    transition: transform 0.3s ease;
-}
-
-.animated-celebration:hover {
-    transform: scale(1.1);
+    animation: gentle-pulse 2s ease-in-out infinite;
 }
 
 .animated-camera {
-    transition: transform 0.3s ease;
+    animation: gentle-bounce 2s ease-in-out infinite;
     cursor: pointer;
-}
-
-.animated-camera:hover {
-    transform: scale(1.1);
 }
 
 .animated-camera:active .flash-effect {
@@ -76,35 +73,19 @@
 }
 
 .animated-music {
-    transition: transform 0.3s ease;
-}
-
-.animated-music:hover {
-    transform: scale(1.1) rotate(5deg);
+    animation: gentle-pulse 2s ease-in-out infinite;
 }
 
 .animated-dresscode {
-    transition: transform 0.3s ease;
-}
-
-.animated-dresscode:hover {
-    transform: scale(1.1);
+    animation: gentle-pulse 2s ease-in-out infinite;
 }
 
 .animated-clipboard {
-    transition: transform 0.3s ease;
-}
-
-.animated-clipboard:hover {
-    transform: scale(1.1);
+    animation: gentle-pulse 2s ease-in-out infinite;
 }
 
 .animated-gift {
-    transition: transform 0.3s ease;
-}
-
-.animated-gift:hover {
-    transform: scale(1.1);
+    animation: gentle-bounce 2s ease-in-out infinite;
 }
 
 .animated-gift:hover .gift-lid {
@@ -118,19 +99,11 @@
 }
 
 .animated-whatsapp {
-    transition: transform 0.3s ease;
-}
-
-.animated-whatsapp:hover {
-    transform: scale(1.1);
+    animation: gentle-pulse 2s ease-in-out infinite;
 }
 
 .animated-volume {
-    transition: transform 0.3s ease;
-}
-
-.animated-volume:hover {
-    transform: scale(1.1);
+    animation: gentle-pulse 2s ease-in-out infinite;
 }
 
 /* Efectos globales para iconos */
@@ -160,9 +133,14 @@
     box-sizing: border-box;
 }
 
+html {
+    background-color: hsl(var(--pink-sides));
+}
+
 body {
     font-family: 'Inter', sans-serif;
-    background-color: hsl(var(--cream)); /* igual que el fondo inferior */
+    /* Laterales en un único color */
+    background-color: hsl(var(--pink-sides));
     color: hsl(var(--foreground));
     line-height: 1.6;
 }
@@ -251,7 +229,7 @@ body {
     content: "";
     position: absolute;
     inset: -40vh -10vw -40vh -10vw;
-    background-image: url('https://i.ibb.co/LzVyZW3t/ac7b928777c3c889825a9d434096caed.jpg');
+    background-image: url('https://i.ibb.co/5W8Zjdk9/09e63d1c599174e6560fae197a8f996a.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.55;
@@ -307,6 +285,21 @@ body {
     gap: 0.75rem;
     justify-content: center;
     align-items: center; /* evita que los botones se estiren */
+}
+
+/* Botones del modal: colores solicitados */
+.modal-buttons #enterWithMusic.btn-wedding,
+.modal-buttons #enterWithoutMusic.btn-wedding {
+    background-image: none !important;
+    background: #FFF2F3 !important;
+    background-color: #FFF2F3 !important;
+    border: none !important;
+    color: #899899 !important;
+}
+.modal-buttons #enterWithMusic.btn-wedding:hover,
+.modal-buttons #enterWithoutMusic.btn-wedding:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: var(--shadow-gold);
 }
 
 @media (max-width: 640px) {
@@ -431,7 +424,7 @@ body {
     inset: 0;
     width: 100%;
     height: 140%;
-    background-image: url('https://i.ibb.co/LzVyZW3t/ac7b928777c3c889825a9d434096caed.jpg');
+    background-image: url('https://i.ibb.co/5W8Zjdk9/09e63d1c599174e6560fae197a8f996a.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -544,7 +537,7 @@ body {
     z-index: 1;
     /* Ya no empuja 100vh completos porque la portada es 60vh */
     margin-top: 0;
-    background: hsl(var(--cream));
+    background: transparent;
 }
 
 /* Sections */
@@ -559,13 +552,13 @@ body {
 
 .gallery-section,
 .gifts-section {
-    background-color: hsl(var(--warm-white));
+    background-color: transparent;
 }
 
 /* Countdown */
 .countdown-section {
     text-align: center;
-    background-color: #ffffff;
+    background-color: transparent;
     border: 1px solid hsl(var(--gold) / 0.25);
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.06);
@@ -660,6 +653,15 @@ body {
 	animation: tieFloat 3s ease-in-out infinite;
 }
 
+/* Color de la corbata en Dress Code */
+.party-icon .tie-icon svg *,
+.party-icon .tie-icon svg {
+	fill: #FDE2E1 !important;
+	stroke: #FDE2E1 !important;
+}
+
+/* Revertir color especial de corbata (usa estilos originales) */
+
 @keyframes tieFloat {
 	0% { transform: translateY(0) rotate(0deg); }
 	50% { transform: translateY(-4px) rotate(1deg); }
@@ -680,20 +682,20 @@ body {
 }
 
 .event-icon {
-    width: 5rem;
-    height: 5rem;
-    margin: 0 auto 1.5rem;
-    padding: 1rem;
-    border-radius: 50%;
-    background-color: hsl(var(--gold) / 0.1);
-    border: 2px solid hsl(var(--gold));
-    box-shadow: var(--shadow-elegant);
+    width: 5rem !important;
+    height: 5rem !important;
+    margin: 0 auto 1.5rem !important;
+    padding: 1rem !important;
+    border-radius: 50% !important;
+    background-color: hsl(var(--gold) / 0.1) !important;
+    border: 2px solid hsl(var(--gold)) !important;
+    box-shadow: var(--shadow-elegant) !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: hsl(var(--gold));
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
-    animation: gentle-pulse 2s ease-in-out infinite;
+    color: hsl(var(--gold)) !important;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15)) !important;
+    animation: gentle-pulse 2s ease-in-out infinite !important;
 }
 
 .celebration-icon {
@@ -767,20 +769,20 @@ body {
 }
 
 .camera-icon {
-    width: 4rem;
-    height: 4rem;
-    margin: 0 auto 3rem;
-    padding: 1rem;
-    border-radius: 50%;
-    background-color: hsl(var(--gold) / 0.1);
-    border: 2px solid hsl(var(--gold));
-    box-shadow: var(--shadow-elegant);
+    width: 4rem !important;
+    height: 4rem !important;
+    margin: 0 auto 3rem !important;
+    padding: 1rem !important;
+    border-radius: 50% !important;
+    background-color: hsl(var(--gold) / 0.1) !important;
+    border: 2px solid hsl(var(--gold)) !important;
+    box-shadow: var(--shadow-elegant) !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: hsl(var(--gold));
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
-    animation: gentle-bounce 2s ease-in-out infinite;
+    color: hsl(var(--gold)) !important;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15)) !important;
+    animation: gentle-bounce 2s ease-in-out infinite !important;
 }
 
 /* Carrusel */
@@ -869,9 +871,9 @@ body {
 
 .party-card {
     padding: 2rem;
-    border: 2px solid hsl(var(--gold) / 0.2);
+    border: none;
     border-radius: 0.5rem;
-    background-color: hsl(var(--warm-white));
+    background-color: #FFF2F3;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     text-align: center;
@@ -882,20 +884,31 @@ body {
 }
 
 .party-icon {
-    width: 6rem;
-    height: 6rem;
-    margin: 0 auto 1.5rem;
-    padding: 0.75rem;
-    border-radius: 50%;
-    background-color: hsl(var(--gold) / 0.1);
-    box-shadow: var(--shadow-elegant);
+    width: 6rem !important;
+    height: 6rem !important;
+    margin: 0 auto 1.5rem !important;
+    padding: 0.75rem !important;
+    border-radius: 50% !important;
+    background-color: hsl(var(--gold) / 0.1) !important;
+    box-shadow: var(--shadow-elegant) !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: hsl(var(--gold));
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
-    animation: gentle-pulse 2s ease-in-out infinite;
-    overflow: hidden;
+    color: hsl(var(--gold)) !important;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15)) !important;
+    animation: gentle-pulse 2s ease-in-out infinite !important;
+    overflow: hidden !important;
+}
+
+/* Remover borde/círculo dorado SOLO en Música, Dress Code y Detalles */
+.party-section .party-card .party-icon {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    filter: none !important;
+    animation: none !important;
 }
 
 .party-icon .tie-icon,
@@ -928,20 +941,20 @@ body {
 
 .gift-icon,
 .whatsapp-icon {
-    width: 5rem;
-    height: 5rem;
-    margin: 0 auto 2rem;
-    padding: 1rem;
-    border-radius: 50%;
-    background-color: hsl(var(--gold) / 0.1);
-    border: 2px solid hsl(var(--gold));
-    box-shadow: var(--shadow-elegant);
+    width: 5rem !important;
+    height: 5rem !important;
+    margin: 0 auto 2rem !important;
+    padding: 1rem !important;
+    border-radius: 50% !important;
+    background-color: hsl(var(--gold) / 0.1) !important;
+    border: 2px solid hsl(var(--gold)) !important;
+    box-shadow: var(--shadow-elegant) !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: hsl(var(--gold));
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
-    animation: gentle-bounce 2s ease-in-out infinite;
+    color: hsl(var(--gold)) !important;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15)) !important;
+    animation: gentle-bounce 2s ease-in-out infinite !important;
 }
 
 .whatsapp-icon {
@@ -957,11 +970,145 @@ body {
 }
 
 /* Footer */
-.footer {
-    background-color: hsl(var(--brown));
-    color: white;
-    padding: 2rem 1rem;
+/* Footer como sección final */
+.footer-section {
+    padding: 4rem 1rem;
+    background-color: #FFF2F3 !important;
+}
+.footer-section .footer-content {
     text-align: center;
+}
+/* Override global de color de texto a negro */
+body,
+h1, h2, h3, h4, h5, h6,
+p, span, a, li, label, small, strong, em,
+div, button, input, textarea {
+    color: #899899 !important;
+}
+
+/* Theming de botones e iconos por sección */
+/* Secciones claras (#FFF2F3) -> botones e iconos #FDE2E1 */
+.countdown-section .btn-wedding,
+.gallery-section .btn-wedding,
+.gifts-section .btn-wedding,
+.footer-section .btn-wedding,
+/* incluir botones de carrusel en secciones claras */
+.gallery-section .carousel-btn {
+    background: #FDE2E1 !important;
+    border: none !important;
+    color: #000 !important;
+}
+
+.gallery-section .carousel-btn:hover { 
+    background: #FDE2E1 !important; 
+}
+
+.countdown-section .event-icon,
+.countdown-section .camera-icon,
+.countdown-section .gift-icon,
+.countdown-section .party-icon,
+.countdown-section .whatsapp-icon,
+.gallery-section .event-icon,
+.gallery-section .camera-icon,
+.gallery-section .gift-icon,
+.gallery-section .party-icon,
+.gallery-section .whatsapp-icon,
+.gifts-section .event-icon,
+.gifts-section .camera-icon,
+.gifts-section .gift-icon,
+.gifts-section .party-icon,
+.gifts-section .whatsapp-icon,
+.footer-section .event-icon,
+.footer-section .camera-icon,
+.footer-section .gift-icon,
+.footer-section .party-icon,
+.footer-section .whatsapp-icon {
+    background-color: #FDE2E1 !important;
+    border-color: #FDE2E1 !important;
+}
+
+/* Secciones pastel (#FDE2E1) -> botones e iconos #FFF2F3 */
+.events-section .btn-wedding,
+.party-section .btn-wedding,
+.rsvp-section .btn-wedding,
+/* por consistencia si hubiese botones genéricos */
+.events-section .carousel-btn,
+.party-section .carousel-btn,
+.rsvp-section .carousel-btn {
+    background: #FFF2F3 !important;
+    border: none !important;
+    color: #000 !important;
+}
+
+.events-section .carousel-btn:hover,
+.party-section .carousel-btn:hover,
+.rsvp-section .carousel-btn:hover { 
+    background: #FFF2F3 !important; 
+}
+
+/* Forzar color de texto #899899 en TODOS los botones, con igual o mayor especificidad */
+.countdown-section .btn-wedding,
+.gallery-section .btn-wedding,
+.gifts-section .btn-wedding,
+.footer-section .btn-wedding,
+.events-section .btn-wedding,
+.party-section .btn-wedding,
+.rsvp-section .btn-wedding,
+.gallery-section .carousel-btn,
+.events-section .carousel-btn,
+.party-section .carousel-btn,
+.rsvp-section .carousel-btn,
+.modal-buttons #enterWithMusic.btn-wedding,
+.modal-buttons #enterWithoutMusic.btn-wedding {
+    color: #899899 !important;
+}
+
+/* Remover bordes/círculos dorados de TODOS los íconos y del contador */
+.event-icon,
+.camera-icon,
+.gift-icon,
+.whatsapp-icon {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    filter: none !important;
+    animation: none !important;
+}
+
+.countdown-section {
+    border: none !important;
+}
+
+.events-section .event-icon,
+.events-section .camera-icon,
+.events-section .gift-icon,
+.events-section .party-icon,
+.events-section .whatsapp-icon,
+.party-section .event-icon,
+.party-section .camera-icon,
+.party-section .gift-icon,
+.party-section .party-icon,
+.party-section .whatsapp-icon,
+.rsvp-section .event-icon,
+.rsvp-section .camera-icon,
+.rsvp-section .gift-icon,
+.rsvp-section .party-icon,
+.rsvp-section .whatsapp-icon {
+    background-color: #FFF2F3 !important;
+    border-color: #FFF2F3 !important;
+}
+
+/* Forzar color negro en iconografía SVG e icon containers */
+.event-icon, .party-icon, .gift-icon, .whatsapp-icon, .camera-icon, .modal-icon {
+    color: #899899 !important;
+}
+/* No forzar negro en SVG para permitir colores por icono */
+.footer {
+    display: none;
 }
 
 .footer-content h3 {
@@ -992,6 +1139,108 @@ body {
     transition: all 0.3s ease;
     max-width: 300px;
 }
+
+/* Final overrides: eliminar completamente anillos/bordes dorados de todos los iconos */
+.event-icon,
+.camera-icon,
+.gift-icon,
+.whatsapp-icon {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    filter: none !important;
+    animation: none !important;
+}
+
+/* Final override: quitar bordes y sombras de TODOS los botones */
+button,
+.btn-wedding,
+.carousel-btn {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Quitar fondo/borde directamente al elemento lord-icon dentro de los contenedores */
+.event-icon lord-icon,
+.camera-icon lord-icon,
+.gift-icon lord-icon,
+.whatsapp-icon lord-icon,
+.party-icon lord-icon {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+/* Apagar cualquier marco para íconos específicos en sus secciones */
+.events-section .event-icon,
+.gallery-section .camera-icon,
+.gifts-section .gift-icon,
+.rsvp-section .whatsapp-icon {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    filter: none !important;
+}
+
+/* Estados: asegurar sin borde ni sombra en hover/focus/active */
+.btn-wedding:hover,
+.btn-wedding:focus,
+.btn-wedding:active,
+.carousel-btn:hover,
+.carousel-btn:focus,
+.carousel-btn:active {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background-image: none !important;
+}
+
+/* Evitar bordes por apariencia nativa */
+.btn-wedding,
+.carousel-btn,
+button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Fondo para botones: Sugerir canción, Ver más y Más info */
+button.btn-wedding[onclick="suggestMusic()"],
+button.btn-wedding[onclick="showGifts()"],
+button.btn-wedding[onclick="showTips()"],
+button.btn-wedding[onclick="showDressCode()"],
+button.btn-wedding[onclick="confirmAttendance()"] {
+    background: #FDE2E1 !important;
+    background-image: none !important;
+    color: #899899 !important;
+}
+
+button.btn-wedding[onclick="suggestMusic()"]:hover,
+button.btn-wedding[onclick="showGifts()"]:hover,
+button.btn-wedding[onclick="showTips()"]:hover,
+button.btn-wedding[onclick="showDressCode()"]:hover,
+button.btn-wedding[onclick="suggestMusic()"]:focus,
+button.btn-wedding[onclick="showGifts()"]:focus,
+button.btn-wedding[onclick="showTips()"]:focus,
+button.btn-wedding[onclick="showDressCode()"]:focus,
+button.btn-wedding[onclick="confirmAttendance()"]:focus,
+button.btn-wedding[onclick="suggestMusic()"]:active,
+button.btn-wedding[onclick="showGifts()"]:active,
+button.btn-wedding[onclick="showTips()"]:active,
+button.btn-wedding[onclick="showDressCode()"]:active,
+button.btn-wedding[onclick="confirmAttendance()"]:active {
+    background: #FDE2E1 !important;
+    background-image: none !important;
+    color: #899899 !important;
+}
+/* (removido) */
 
 .toast.show {
     opacity: 1;
@@ -1038,8 +1287,8 @@ body {
     }
     /* En móvil, eliminar laterales y usar fondo uniforme */
     body { 
-        background-image: none; 
-        background-color: hsl(var(--warm-white)); 
+        /* Mantener un único color en laterales también en móvil */
+        background-color: hsl(var(--pink-sides));
     }
     /* El contenedor ocupa el 100% en móvil, sin borde/sombra */
     .site-container { padding: 0; max-width: none; width: 100%; }
@@ -1071,6 +1320,14 @@ body {
         height: 40px;
         font-size: 1rem;
     }
+}
+
+/* Texto de todos los botones en blanco */
+button,
+.btn-wedding,
+button.btn-wedding,
+.carousel-btn {
+    color: #899899 !important;
 }
 
 @media (max-width: 480px) {
@@ -1140,21 +1397,21 @@ body {
 }
 
 /* Enlarge camera icon container for better balance */
+/* Eliminar anillo/borde de camera-icon (residuo tardío) */
 .camera-icon {
-	width: 6rem;
-	height: 6rem;
+	width: auto;
+	height: auto;
 	margin: 0 auto 3rem;
-	padding: 1rem;
-	border-radius: 50%;
-	background-color: hsl(var(--gold) / 0.1);
-	border: 2px solid hsl(var(--gold));
-	box-shadow: var(--shadow-elegant);
+	padding: 0;
+	border-radius: 0;
+	background: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: hsl(var(--gold));
-	filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
-	animation: gentle-bounce 2s ease-in-out infinite;
+	filter: none !important;
+	animation: none !important;
 }
 
 /* Mobile-specific hero heights */
@@ -1173,3 +1430,30 @@ body {
 }
 
 /* Desktop-specific: (parallax por capa, ya no usamos background-attachment) */
+
+/* Fondos rosados alternados por sección */
+.page-shell .content .site-container > section:nth-of-type(odd) {
+    background-color: hsl(var(--pink-light));
+}
+
+.page-shell .content .site-container > section:nth-of-type(even) {
+    background-color: hsl(var(--pink-dark));
+}
+
+/* Asignación explícita por secciones para asegurar alternancia visible */
+.countdown-section,
+.gallery-section,
+.gifts-section {
+    background-color: #FFF2F3 !important; /* rosado muy claro */
+}
+
+.events-section,
+.party-section,
+.rsvp-section {
+    background-color: #FDE2E1 !important; /* rosado pastel suave */
+}
+
+/* Asegurar secuencia: footer como siguiente sección clara */
+.footer-section {
+    background-color: #FFF2F3 !important;
+}
