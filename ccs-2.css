@@ -1211,6 +1211,32 @@ button {
     appearance: none;
 }
 
+/* Fondo para botones: Sugerir canción, Ver más y Más info */
+button.btn-wedding[onclick="suggestMusic()"],
+button.btn-wedding[onclick="showGifts()"],
+button.btn-wedding[onclick="showTips()"],
+button.btn-wedding[onclick="showDressCode()"] {
+    background: #FDE2E1 !important;
+    background-image: none !important;
+    color: #899899 !important;
+}
+
+button.btn-wedding[onclick="suggestMusic()"]:hover,
+button.btn-wedding[onclick="showGifts()"]:hover,
+button.btn-wedding[onclick="showTips()"]:hover,
+button.btn-wedding[onclick="showDressCode()"]:hover,
+button.btn-wedding[onclick="suggestMusic()"]:focus,
+button.btn-wedding[onclick="showGifts()"]:focus,
+button.btn-wedding[onclick="showTips()"]:focus,
+button.btn-wedding[onclick="showDressCode()"]:focus,
+button.btn-wedding[onclick="suggestMusic()"]:active,
+button.btn-wedding[onclick="showGifts()"]:active,
+button.btn-wedding[onclick="showTips()"]:active,
+button.btn-wedding[onclick="showDressCode()"]:active {
+    background: #FDE2E1 !important;
+    background-image: none !important;
+    color: #899899 !important;
+}
 /* (removido) */
 
 .toast.show {
