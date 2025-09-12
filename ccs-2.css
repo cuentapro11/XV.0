@@ -1215,7 +1215,8 @@ button {
 button.btn-wedding[onclick="suggestMusic()"],
 button.btn-wedding[onclick="showGifts()"],
 button.btn-wedding[onclick="showTips()"],
-button.btn-wedding[onclick="showDressCode()"] {
+button.btn-wedding[onclick="showDressCode()"],
+button.btn-wedding[onclick="confirmAttendance()"] {
     background: #FDE2E1 !important;
     background-image: none !important;
     color: #899899 !important;
@@ -1229,10 +1230,12 @@ button.btn-wedding[onclick="suggestMusic()"]:focus,
 button.btn-wedding[onclick="showGifts()"]:focus,
 button.btn-wedding[onclick="showTips()"]:focus,
 button.btn-wedding[onclick="showDressCode()"]:focus,
+button.btn-wedding[onclick="confirmAttendance()"]:focus,
 button.btn-wedding[onclick="suggestMusic()"]:active,
 button.btn-wedding[onclick="showGifts()"]:active,
 button.btn-wedding[onclick="showTips()"]:active,
-button.btn-wedding[onclick="showDressCode()"]:active {
+button.btn-wedding[onclick="showDressCode()"]:active,
+button.btn-wedding[onclick="confirmAttendance()"]:active {
     background: #FDE2E1 !important;
     background-image: none !important;
     color: #899899 !important;
